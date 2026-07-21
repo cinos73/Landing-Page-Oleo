@@ -26,12 +26,6 @@
             }
         }
     </script>
-    <style>
-        /* Cursor personalizado de pincel */
-        .cursor-pincel {
-            cursor: url('Img/pincel.png') 0 32, crosshair;
-        }
-    </style>
 </head>
 <body class="bg-sand text-darkBrown antialiased selection:bg-accent selection:text-white w-full overflow-x-hidden"> 
 
@@ -42,10 +36,10 @@
     </div>
 
     <header class="bg-white border-b border-[#E6DCD0] sticky top-0 z-40 shadow-sm w-full">
-        <div class="max-w-7xl mx-auto px-6 h-24 md:h-28 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-24 md:h-32 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="#" class="block">
-                    <img src="Img/logo.png" alt="Oleo Alfajorería Logo" class="h-14 md:h-20 w-auto">
+                    <img src="Img/logo.png" alt="Oleo Alfajorería Logo" class="h-20 md:h-28 w-auto">
                 </a>
             </div>
             <nav class="hidden md:flex items-center gap-10 text-sm font-semibold text-darkBrown">
@@ -53,7 +47,7 @@
                 <a href="#corporativo" class="hover:text-accent transition">Venta Corporativa</a>
             </nav>
             <div>
-                <a href="https://wa.me/56991962562?text=Hola,%20quiero%20cotizar%20alfajores%20oleo" target="_blank" class="bg-accent text-white text-xs font-semibold uppercase tracking-wider px-5 md:px-7 py-3 md:py-4 rounded-full hover:bg-[#A96348] transition shadow-sm inline-flex items-center gap-2">
+                <a href="https://wa.me/56991962562?text=Hola,%20quiero%20cotizar%20alfajores%20oleo" target="_blank" class="bg-primary text-white text-xs font-semibold uppercase tracking-wider px-5 md:px-7 py-3 md:py-4 rounded-full hover:bg-[#4A6058] transition shadow-sm inline-flex items-center gap-2">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                     </svg>
@@ -63,28 +57,30 @@
         </div>
     </header>
 
-    <section id="hero-interactive" class="relative w-full overflow-hidden flex flex-col justify-center cursor-pincel" style="height: 85vh; min-height: 680px;">
+    <section id="hero-interactive" class="relative w-full overflow-hidden flex flex-col justify-center" style="height: 85vh; min-height: 680px;">
         
         <div class="absolute inset-0 z-0">
-            <img src="Img/lienzoColor.png" alt="Fondo Patrón Oleo Alfajorería" class="w-full h-full object-cover object-center brightness-75" loading="eager">
+            <img src="Img/lienzoColor.png" alt="Fondo Patrón Oleo Alfajorería" class="w-full h-full object-cover object-center" loading="eager">
         </div>
-
-        <canvas id="oilCanvas" class="absolute inset-0 z-10 w-full h-full"></canvas>
         
-        <div class="relative z-20 max-w-none w-full h-full flex flex-col items-start justify-end pb-24 md:justify-center md:pb-0 px-6 md:px-20 lg:px-32 text-left pointer-events-none">
-            <span class="text-xs uppercase tracking-widest bg-darkBrown/20 text-white backdrop-blur-md border border-white/20 px-4 py-2 rounded-full font-semibold drop-shadow mb-4 md:mb-0">Regalos Premium</span>
+        <div class="relative z-20 max-w-none w-full h-full flex flex-col items-start justify-end pb-16 md:justify-center md:pb-0 px-6 md:px-20 lg:px-32 text-left pointer-events-none">
             
-            <h1 class="text-4xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter my-4 md:my-8 leading-none text-white drop-shadow-lg max-w-5xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                Experiencias<br>para compartir.
-            </h1>
-            
-            <p class="text-base md:text-xl text-white font-medium mb-8 md:mb-12 max-w-2xl leading-relaxed drop-shadow" style="text-shadow: 0 2px 10px rgba(0,0,0,0.4);">
-                Alfajores premium en cajas de diseño exclusivo. Un detalle inolvidable para empresas y personas.
-            </p>
-            
-            <a href="https://wa.me/56991962562?text=Hola,%20quiero%20cotizar%20regalos%20corporativos" target="_blank" class="inline-block bg-accent text-white font-medium px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-2xl hover:bg-[#A96348] transition transform hover:-translate-y-1 text-center text-base md:text-lg tracking-wide pointer-events-auto cursor-pointer">
-                Cotizar Regalos Corporativos
-            </a>
+            <div class="bg-sand/85 backdrop-blur-lg border border-white/50 p-8 md:p-14 rounded-[2rem] shadow-2xl max-w-4xl pointer-events-auto transform transition-all">
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-[1.05] text-darkBrown">
+                    Alfajores<br>para <span id="hero-dynamic-word" class="text-accent inline-block min-w-[4em]">saborear</span>
+                </h1>
+                
+                <p class="text-base md:text-xl text-stone-700 font-medium mb-10 leading-relaxed max-w-2xl">
+                    Alfajores premium en cajas de diseño exclusivo. Un detalle inolvidable para empresas y personas.
+                </p>
+                
+                <a href="#productos" class="inline-flex items-center gap-3 bg-accent text-white font-semibold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-lg hover:bg-[#A96348] transition transform hover:-translate-y-1 text-center text-base md:text-lg tracking-wide">
+                    Ver nuestros alfajores
+
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -154,147 +150,30 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const canvas = document.getElementById("oilCanvas");
-            const ctx = canvas.getContext("2d");
-            const section = document.getElementById("hero-interactive");
-            
-            let lastPos = null;
-            let currentCanvasWidth = 0; // Guardamos el ancho para comparar
+            const words = ["saborear", "regalar", "sentir", "compartir"];
+            let currentIndex = 0;
+            const wordElement = document.getElementById("hero-dynamic-word");
 
-            function resizeCanvas() {
-                const newWidth = section.offsetWidth;
-                const newHeight = section.offsetHeight;
+            wordElement.style.transition = "all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
 
-                // FIX 1: Solo resetear si el ANCHO cambia. 
-                // Esto evita que el scroll en móvil (que oculta/muestra la barra de direcciones y cambia el alto) borre tu progreso.
-                if (currentCanvasWidth !== newWidth) {
-                    canvas.width = newWidth;
-                    canvas.height = newHeight;
-                    fillCanvas();
-                    currentCanvasWidth = newWidth;
-                    
-                    if (window.scrollY < 10) {
-                        setTimeout(autoReveal, 600);
-                    }
-                }
-            }
-
-            function fillCanvas() {
-                ctx.globalCompositeOperation = 'source-over';
-                const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-                gradient.addColorStop(0, '#3A4E48');
-                gradient.addColorStop(1, '#5A746B');
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-            }
-
-            // Pincelada vectorial continua
-            function scrapeContinuous(pos) {
-                if (!lastPos) {
-                    lastPos = pos;
-                    return; 
-                }
-
-                ctx.globalCompositeOperation = 'destination-out';
-                ctx.lineJoin = 'round';
-                ctx.lineCap = 'round';
-
-                // 1. Trazo central principal
-                ctx.beginPath();
-                ctx.lineWidth = 75; 
-                ctx.moveTo(lastPos.x, lastPos.y);
-                ctx.lineTo(pos.x, pos.y);
-                ctx.stroke();
-
-                // 2. Cerdas paralelas que forman la textura de brocha
-                const angle = Math.atan2(pos.y - lastPos.y, pos.x - lastPos.x);
-
-                for (let i = 0; i < 6; i++) {
-                    let offset = (Math.random() - 0.5) * 120; 
-                    let thickness = Math.random() * 8 + 2;
-                    
-                    let pX1 = lastPos.x + Math.cos(angle + Math.PI/2) * offset;
-                    let pY1 = lastPos.y + Math.sin(angle + Math.PI/2) * offset;
-                    
-                    let pX2 = pos.x + Math.cos(angle + Math.PI/2) * offset;
-                    let pY2 = pos.y + Math.sin(angle + Math.PI/2) * offset;
-
-                    ctx.beginPath();
-                    ctx.lineWidth = thickness;
-                    ctx.moveTo(pX1, pY1);
-                    ctx.lineTo(pX2, pY2);
-                    ctx.stroke();
-                }
+            setInterval(() => {
+                wordElement.style.transform = "translateY(20px)";
+                wordElement.style.opacity = "0";
                 
-                lastPos = pos;
-            }
-
-            function autoReveal() {
-                let startX = canvas.width * 0.8;
-                let startY = canvas.height * 0.15;
-                let endX = canvas.width * 0.2;
-                let endY = canvas.height * 0.85;
-                let progress = 0;
-                
-                lastPos = { x: startX, y: startY };
-
-                function drawFrame() {
-                    progress += 0.02; 
-                    if (progress > 1) {
-                        lastPos = null; 
-                        return;
-                    }
-
-                    let currentX = startX + (endX - startX) * progress;
-                    let currentY = startY + (endY - startY) * progress;
-
-                    scrapeContinuous({ x: currentX, y: currentY });
-                    requestAnimationFrame(drawFrame);
-                }
-                requestAnimationFrame(drawFrame);
-            }
-
-            window.addEventListener('resize', resizeCanvas);
-            resizeCanvas();
-
-            function getMousePos(evt) {
-                const rect = canvas.getBoundingClientRect();
-                const scaleX = canvas.width / rect.width;
-                const scaleY = canvas.height / rect.height;
-                let clientX = evt.clientX;
-                let clientY = evt.clientY;
-                if (evt.touches && evt.touches.length > 0) {
-                    clientX = evt.touches[0].clientX;
-                    clientY = evt.touches[0].clientY;
-                }
-                return {
-                    x: (clientX - rect.left) * scaleX,
-                    y: (clientY - rect.top) * scaleY
-                };
-            }
-
-            canvas.addEventListener('mousemove', (evt) => {
-                scrapeContinuous(getMousePos(evt));
-            });
-
-            // FIX 2: Scroll liberado. { passive: true } y quitamos el evt.preventDefault()
-            canvas.addEventListener('touchmove', (evt) => {
-                scrapeContinuous(getMousePos(evt));
-            }, { passive: true });
-
-            canvas.addEventListener('mouseleave', () => lastPos = null);
-            canvas.addEventListener('touchend', () => lastPos = null);
-
-            // Disolución progresiva al hacer scroll
-            window.addEventListener('scroll', () => {
-                const scrollY = window.scrollY;
-                if (scrollY > 50) {
-                    let opacity = 1 - ((scrollY - 50) / 200); 
-                    canvas.style.opacity = Math.max(opacity, 0);
-                } else {
-                    canvas.style.opacity = 1;
-                }
-            });
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % words.length;
+                    wordElement.textContent = words[currentIndex];
+                    
+                    wordElement.style.transition = "none"; 
+                    wordElement.style.transform = "translateY(-20px)";
+                    
+                    void wordElement.offsetWidth;
+                    
+                    wordElement.style.transition = "all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+                    wordElement.style.transform = "translateY(0)";
+                    wordElement.style.opacity = "1";
+                }, 500); 
+            }, 2500);
         });
     </script>
 </body>
