@@ -174,13 +174,12 @@
             const ctx = canvas.getContext("2d");
             const section = document.getElementById("hero-interactive");
             
-            let lastPos = null;
-
             function resizeCanvas() {
                 canvas.width = section.offsetWidth;
                 canvas.height = section.offsetHeight;
                 fillCanvas();
                 
+                // Ejecutar animación inicial solo si el usuario está arriba del todo
                 if (window.scrollY < 10) {
                     setTimeout(autoReveal, 600);
                 }
@@ -195,68 +194,27 @@
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
             }
 
-            // Pincelada vectorial continua
-            function scrapeContinuous(pos) {
-                if (!lastPos) {
-                    lastPos = pos;
-                    return; // Evita un inicio brusco
-                }
-
-                ctx.globalCompositeOperation = 'destination-out';
-                ctx.lineJoin = 'round';
-                ctx.lineCap = 'round';
-
-                // 1. Cuerpo central denso de la espátula
-                ctx.beginPath();
-                ctx.lineWidth = 75; 
-                ctx.moveTo(lastPos.x, lastPos.y);
-                ctx.lineTo(pos.x, pos.y);
-                ctx.stroke();
-
-                // 2. Textura de cerdas proyectadas en paralelo a la trayectoria
-                const angle = Math.atan2(pos.y - lastPos.y, pos.x - lastPos.x);
-
-                for (let i = 0; i < 6; i++) {
-                    let offset = (Math.random() - 0.5) * 120; // Dispersión a los lados
-                    let thickness = Math.random() * 8 + 2;
-                    
-                    // Cálculo trigonométrico para mover las cerdas en 90 grados respecto al trazo
-                    let pX1 = lastPos.x + Math.cos(angle + Math.PI/2) * offset;
-                    let pY1 = lastPos.y + Math.sin(angle + Math.PI/2) * offset;
-                    
-                    let pX2 = pos.x + Math.cos(angle + Math.PI/2) * offset;
-                    let pY2 = pos.y + Math.sin(angle + Math.PI/2) * offset;
-
-                    ctx.beginPath();
-                    ctx.lineWidth = thickness;
-                    ctx.moveTo(pX1, pY1);
-                    ctx.lineTo(pX2, pY2);
-                    ctx.stroke();
-                }
-                
-                lastPos = pos;
-            }
-
+            // 1. ONBOARDING VISUAL: El brochazo fantasma inicial
             function autoReveal() {
+                ctx.globalCompositeOperation = 'destination-out';
+                // Define la trayectoria (diagonal de derecha-arriba hacia izquierda-abajo)
                 let startX = canvas.width * 0.8;
                 let startY = canvas.height * 0.15;
                 let endX = canvas.width * 0.2;
                 let endY = canvas.height * 0.85;
                 let progress = 0;
-                
-                lastPos = { x: startX, y: startY };
 
                 function drawFrame() {
-                    progress += 0.02; 
-                    if (progress > 1) {
-                        lastPos = null; // Reiniciar
-                        return;
-                    }
+                    progress += 0.015; // Velocidad del rasgado automático
+                    if (progress > 1) return;
 
                     let currentX = startX + (endX - startX) * progress;
                     let currentY = startY + (endY - startY) * progress;
 
-                    scrapeContinuous({ x: currentX, y: currentY });
+                    ctx.beginPath();
+                    ctx.arc(currentX, currentY, 80, 0, Math.PI * 2, false);
+                    ctx.fill();
+
                     requestAnimationFrame(drawFrame);
                 }
                 requestAnimationFrame(drawFrame);
@@ -281,24 +239,23 @@
                 };
             }
 
-            // Event Listeners de interacción
-            canvas.addEventListener('mousemove', (evt) => {
-                scrapeContinuous(getMousePos(evt));
-            });
+            function scrapePaint(evt) {
+                if (evt.type === 'touchmove' && evt.cancelable) evt.preventDefault();
+                const pos = getMousePos(evt);
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 75, 0, Math.PI * 2, false);
+                ctx.fill();
+            }
 
-            canvas.addEventListener('touchmove', (evt) => {
-                if (evt.cancelable) evt.preventDefault();
-                scrapeContinuous(getMousePos(evt));
-            }, { passive: false });
+            canvas.addEventListener('mousemove', scrapePaint);
+            canvas.addEventListener('touchmove', scrapePaint, { passive: false });
 
-            // Cortar el trazo si el cursor sale del canvas
-            canvas.addEventListener('mouseleave', () => lastPos = null);
-            canvas.addEventListener('touchend', () => lastPos = null);
-
-            // Escape Hatch por scroll
+            // 2. DISOLUCIÓN POR SCROLL: Escape Hatch
             window.addEventListener('scroll', () => {
                 const scrollY = window.scrollY;
                 if (scrollY > 50) {
+                    // Calcula la opacidad en función del scroll. A los 250px desaparece por completo.
                     let opacity = 1 - ((scrollY - 50) / 200); 
                     canvas.style.opacity = Math.max(opacity, 0);
                 } else {
