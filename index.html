@@ -35,7 +35,7 @@
     <div class="sticky top-0 z-50 w-full shadow-sm">
         <div class="bg-primary text-white text-[9px] sm:text-[10px] md:text-[11px] py-1.5 px-3 text-center w-full block">
             <p class="font-medium tracking-wide">
-                Despacho solo en Región Metropolitana <span class="mx-1 opacity-40">|</span> Envío GRATIS en Vitacura, Las Condes, Ñuñoa y sector oriente.
+                Despacho solo en Región Metropolitana <span class="mx-1 opacity-40">|</span> Envío GRATIS sobre $20.000 en Vitacura, Las Condes, Ñuñoa y sector oriente.
             </p>
         </div>
 
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <!-- Menú Mobile -->
+            <!-- Menú Mobile (Con WhatsApp integrado al final) -->
             <div class="md:hidden flex flex-col items-center">
                 <div class="py-2.5 flex justify-center items-center w-full border-b border-[#F0EBE1]">
                     <a href="index.html" class="block">
@@ -79,6 +79,10 @@
                     <a href="empresas.html" class="hover:text-accent transition whitespace-nowrap">Empresas</a>
                     <span class="text-stone-300">|</span>
                     <a href="nosotros.html" class="hover:text-accent transition whitespace-nowrap">Nosotros</a>
+                    <span class="text-stone-300">|</span>
+                    <a href="https://wa.me/56920719565?text=Hola,%20quiero%20comprar%20alfajores%20oleo!" target="_blank" class="text-primary hover:text-accent transition inline-flex items-center gap-1 font-bold whitespace-nowrap">
+                        WhatsApp
+                    </a>
                 </div>
             </div>
         </header>
@@ -120,7 +124,7 @@
                 <h2 class="text-3xl md:text-5xl font-extrabold text-darkBrown tracking-tight font-light">¿Qué llevarás hoy?</h2>
             </div>
 
-            <!-- Filtros / Chips (Organizados de forma fluida y simétrica en móvil) -->
+            <!-- Filtros / Chips -->
             <div class="flex items-center gap-2 md:gap-6 mb-16 flex-wrap">
                 <button onclick="switchTab('destacados')" id="tab-destacados" class="px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-darkBrown text-white shadow-sm transition-all duration-300">
                     Destacados
@@ -182,22 +186,23 @@
 
                 <!-- Producto 3: Caja de Autor -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
-                    <div class="absolute top-6 left-6 z-10 bg-primary text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Edición de autor
+                    <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Agotado
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                        <img src="Img/cajaclasica.png" alt="Caja de Autor" class="w-full h-full object-cover rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                        <img src="Img/cajasurtida.png" alt="Caja Surtida" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                     </div>
                     <div class="flex-grow flex flex-col">
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Edición de Autor (6 Unidades)</h3>
-                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Caja exclusiva con combinaciones vanguardistas de pastelería fina y alta gama.</p>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Surtida (6 Unidades)</h3>
+                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Selección equilibrada para explorar diferentes perfiles de sabor en formato de regalo.</p>
                         <div class="w-12 h-[1px] bg-[#E6DCD0] mb-6"></div>
                     </div>
                     <div class="flex items-center justify-between pt-2 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$16.990</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
+                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$15.690</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
                     </div>
                 </div>
+
 
             </div>
 
@@ -226,7 +231,7 @@
 
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Próximamente
+                        Agotado
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
                         <img src="Img/cajasurtida.png" alt="Caja Surtida" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
@@ -238,7 +243,7 @@
                     </div>
                     <div class="flex items-center justify-between pt-2 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$15.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
                     </div>
                 </div>
 
@@ -247,7 +252,7 @@
                         Próximamente
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                        <img src="Img/cajaclasica.png" alt="Caja de Autor" class="w-full h-full object-cover rounded-lg saturate-0 opacity-75 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                        <img src="Img/cajasurtida.png" alt="Caja de Autor" class="w-full h-full object-cover rounded-lg saturate-0 opacity-75 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                     </div>
                     <div class="flex-grow flex flex-col">
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Edición de Autor (6 Unidades)</h3>
@@ -287,7 +292,7 @@
 
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Próximamente
+                        Agotado
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
                         <img src="Img/alfajorbitter.png" alt="Bitter" class="w-full h-full object-contain object-center rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
@@ -299,13 +304,13 @@
                     </div>
                     <div class="flex items-center justify-between pt-2 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$2.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
                     </div>
                 </div>
 
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Próximamente
+                        Agotado
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
                         <img src="Img/alfajorblanco.png" alt="Chocolate Blanco" class="w-full h-full object-contain object-center rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
@@ -317,7 +322,7 @@
                     </div>
                     <div class="flex items-center justify-between pt-2 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$2.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
                     </div>
                 </div>
 
@@ -344,8 +349,8 @@
         }
     </script>
 
-    <!-- FOOTER -->
-    <footer class="py-20 px-6 md:px-12 border-t border-[#E6DCD0]" style="background-color: #F8F3EA;">
+    <!-- FOOTER CON FAQ INCLUIDO -->
+    <footer class="py-20 px-6 md:px-12 border-t border-[#E6DCD0]" style="background-color: #fbf2e3;">
         <div class="max-w-[85%] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
             <div>
                 <img src="Img/logoTail.png" alt="Oleo Alfajores Logo" class="h-24 w-auto mx-auto md:mx-0 mb-4">
