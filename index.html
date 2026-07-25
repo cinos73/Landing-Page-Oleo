@@ -104,7 +104,7 @@
                     Una obra de arte para
                 </h1>
                 <h2 id="hero-dynamic-word" class="font-extrabold tracking-tight text-accent mt-0 text-[10vw] md:text-[7.2vw]" style="line-height: 0.95;">
-                    sentir
+                    regalar
                 </h2>
                 <p class="text-stone-700 text-[2.5vw] md:text-[0.95vw] font-bold tracking-[0.1em] md:tracking-[0.15em] uppercase mt-3 md:mt-10 mb-4 md:mb-6 drop-shadow-sm leading-relaxed max-w-[90%]">
                     Rellenos de manjar blanco artesanal y bañados en auténtico chocolate&nbsp;belga&nbsp;<img src="Img/banderabelga.png" alt="Bandera Bélgica" class="inline-block w-[1.3em] md:w-[1.5em] h-[1.3em] md:h-[1.5em] rounded-full object-cover align-middle ml-1.5 shadow-sm relative -translate-y-[2px]">
@@ -364,5 +364,40 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const words = ["regalar", "compartir", "saborear", "sentir"];
+        let currentIndex = 0;
+        const wordElement = document.getElementById("hero-dynamic-word");
+
+        if(wordElement) {
+            wordElement.style.transition = "all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+            
+            // Función para cambiar de palabra de forma fluida
+            const changeWord = () => {
+                wordElement.style.transform = "translateY(15px)";
+                wordElement.style.opacity = "0";
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % words.length;
+                    wordElement.textContent = words[currentIndex];
+                    wordElement.style.transition = "none"; 
+                    wordElement.style.transform = "translateY(-15px)";
+                    void wordElement.offsetWidth;
+                    wordElement.style.transition = "all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+                    wordElement.style.transform = "translateY(0)";
+                    wordElement.style.opacity = "1";
+                }, 400); 
+            };
+
+            // Primer cambio rápido a los 1.5 segundos
+            setTimeout(() => {
+                changeWord();
+                // Luego se queda en bucle cada 1.8 segundos
+                setInterval(changeWord, 1800);
+            }, 1500);
+        }
+    });
+</script>
 </body>
 </html>
