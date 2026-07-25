@@ -33,25 +33,25 @@
 <body class="bg-sand text-darkBrown antialiased selection:bg-accent selection:text-white w-full overflow-x-hidden"> 
 
     <div class="sticky top-0 z-50 w-full shadow-sm">
-        <div class="bg-primary text-white text-[10px] md:text-[11px] py-1.5 px-3 text-center w-full">
+        <div class="bg-primary text-white text-[9px] sm:text-[10px] md:text-[11px] py-1.5 px-3 text-center w-full block">
             <p class="font-medium tracking-wide">
                 Despacho solo en Región Metropolitana <span class="mx-1 opacity-40">|</span> Envío GRATIS en Vitacura, Las Condes, Ñuñoa y sector oriente.
             </p>
         </div>
 
         <header class="bg-white border-b border-[#E6DCD0] w-full relative z-50">
+            <!-- Menú Desktop -->
             <div class="max-w-[1700px] mx-auto px-8 md:px-16 h-24 hidden md:flex items-center justify-between">
                 <div class="flex items-center">
-                    <a href="#" class="block">
+                    <a href="index.html" class="block">
                         <img src="Img/oleologo.png" alt="Oleo Alfajorería Logo" class="h-16 w-auto">
                     </a>
                 </div>
                 <nav class="flex items-center gap-10 text-[14px] font-semibold text-darkBrown">
-                    <a href="#hero-interactive" class="hover:text-accent transition">Inicio</a>
+                    <a href="index.html" class="hover:text-accent transition">Inicio</a>
                     <a href="#productos" class="hover:text-accent transition">Catálogo</a>
                     <a href="empresas.html" class="hover:text-accent transition">Venta Empresas</a>
                     <a href="nosotros.html" class="hover:text-accent transition">Nosotros</a>
-                    <a href="faq.html" class="hover:text-accent transition">FAQ</a>
                 </nav>
                 <div>
                     <a href="https://wa.me/56920719565?text=Hola,%20quiero%20comprar%20alfajores%20oleo!" target="_blank" class="bg-primary text-white text-[12px] font-bold uppercase tracking-wider px-6 py-3 rounded-full hover:bg-[#4A6058] transition inline-flex items-center gap-2">
@@ -63,25 +63,22 @@
                 </div>
             </div>
 
+            <!-- Menú Mobile -->
             <div class="md:hidden flex flex-col items-center">
                 <div class="py-2.5 flex justify-center items-center w-full border-b border-[#F0EBE1]">
-                    <a href="#" class="block">
+                    <a href="index.html" class="block">
                         <img src="Img/oleologo.png" alt="Oleo Alfajorería Logo" class="h-12 w-auto">
                     </a>
                 </div>
                 
-                <div class="w-full flex items-center justify-around bg-stone-50 py-2.5 border-b border-[#E6DCD0] text-xs font-semibold text-darkBrown overflow-x-auto px-2">
-                    <a href="#hero-interactive" class="hover:text-accent transition whitespace-nowrap">Inicio</a>
+                <div class="w-full flex items-center justify-around bg-stone-50 py-2.5 border-b border-[#E6DCD0] text-xs font-semibold text-darkBrown overflow-x-auto px-3">
+                    <a href="index.html" class="hover:text-accent transition whitespace-nowrap">Inicio</a>
                     <span class="text-stone-300">|</span>
                     <a href="#productos" class="hover:text-accent transition whitespace-nowrap">Catálogo</a>
                     <span class="text-stone-300">|</span>
                     <a href="empresas.html" class="hover:text-accent transition whitespace-nowrap">Empresas</a>
                     <span class="text-stone-300">|</span>
                     <a href="nosotros.html" class="hover:text-accent transition whitespace-nowrap">Nosotros</a>
-                    <span class="text-stone-300">|</span>
-                    <a href="https://wa.me/56920719565?text=Hola,%20quiero%20comprar%20alfajores%20oleo!" target="_blank" class="text-primary hover:text-accent transition inline-flex items-center gap-1 font-bold whitespace-nowrap">
-                        WhatsApp
-                    </a>
                 </div>
             </div>
         </header>
@@ -118,25 +115,25 @@
     <!-- SECCIÓN DE CATÁLOGO EDITORIAL REFINADO -->
     <section id="productos" class="w-full bg-white py-10 md:py-10">
         <div class="max-w-[85%] mx-auto">
-            <!-- Título principal con mayor espacio inferior -->
-            <div class="text-left mb-16">
+            <!-- Título principal -->
+            <div class="text-left mb-12">
                 <h2 class="text-3xl md:text-5xl font-extrabold text-darkBrown tracking-tight font-light">¿Qué llevarás hoy?</h2>
             </div>
 
-            <!-- Filtros / Chips -->
-            <div class="flex justify-start items-center gap-4 md:gap-6 mb-20 flex-wrap">
-                <button onclick="switchTab('destacados')" id="tab-destacados" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-darkBrown text-white shadow-sm transition-all duration-300">
+            <!-- Filtros / Chips (Organizados de forma fluida y simétrica en móvil) -->
+            <div class="flex items-center gap-2 md:gap-6 mb-16 flex-wrap">
+                <button onclick="switchTab('destacados')" id="tab-destacados" class="px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-darkBrown text-white shadow-sm transition-all duration-300">
                     Destacados
                 </button>
-                <button onclick="switchTab('regalar')" id="tab-regalar" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300">
+                <button onclick="switchTab('regalar')" id="tab-regalar" class="px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300">
                     Para regalar
                 </button>
-                <button onclick="switchTab('alfajores')" id="tab-alfajores" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300">
+                <button onclick="switchTab('alfajores')" id="tab-alfajores" class="px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300">
                     Alfajores
                 </button>
             </div>
 
-            <!-- CONTENEDOR DE PESTAÑAS (GRID 3 COLUMNAS CON ALTURA IGUALADA H-FULL) -->
+            <!-- CONTENEDOR DE PESTAÑAS -->
             
             <!-- 1. DESTACADOS -->
             <div id="content-destacados" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
@@ -162,7 +159,7 @@
                     </div>
                 </div>
 
-                <!-- Producto 2: Clásico (1 Unidad) - Escala corregida para que no se vea enano -->
+                <!-- Producto 2: Clásico (1 Unidad) -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-500 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Individual
@@ -183,13 +180,13 @@
                     </div>
                 </div>
 
-                <!-- Producto 3: Caja Clásica (o Edición de Autor según preferencia) -->
+                <!-- Producto 3: Caja de Autor -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-primary text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Edición de autor
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                        <img src="Img/cajasurtida.png" alt="Caja de Autor" class="w-full h-full object-cover rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                        <img src="Img/cajaclasica.png" alt="Caja de Autor" class="w-full h-full object-cover rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                     </div>
                     <div class="flex-grow flex flex-col">
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Edición de Autor (6 Unidades)</h3>
@@ -204,10 +201,9 @@
 
             </div>
 
-            <!-- 2. PARA REGALAR (Caja Clásica, Caja Surtida CON color y Próximamente, Caja de Autor con saturación 0) -->
+            <!-- 2. PARA REGALAR -->
             <div id="content-regalar" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
                 
-                <!-- Caja Clásica -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-accent text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Más vendido
@@ -228,10 +224,9 @@
                     </div>
                 </div>
 
-                <!-- Caja Surtida (CON COLOR, sin escala de grises, pero con etiqueta Próximamente) -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Agotado
+                        Próximamente
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
                         <img src="Img/cajasurtida.png" alt="Caja Surtida" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
@@ -243,11 +238,10 @@
                     </div>
                     <div class="flex items-center justify-between pt-2 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$15.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
                     </div>
                 </div>
 
-                <!-- Caja de Autor (Con saturación 0) -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Próximamente
@@ -268,10 +262,9 @@
 
             </div>
 
-            <!-- 3. ALFAJORES (UNITARIOS) -->
+            <!-- 3. ALFAJORES -->
             <div id="content-alfajores" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
                 
-                <!-- Clásico Unitario -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-500 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Individual
@@ -292,41 +285,39 @@
                     </div>
                 </div>
 
-                <!-- Bitter -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Agotado
+                        Próximamente
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
                         <img src="Img/alfajorbitter.png" alt="Bitter" class="w-full h-full object-contain object-center rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                     </div>
                     <div class="flex-grow flex flex-col">
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Bitter 70% (1 Unidad)</h3>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Bitter 70% (Unidad)</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Bañado en auténtico chocolate belga bitter con notas profundas de cacao.</p>
                         <div class="w-12 h-[1px] bg-[#E6DCD0] mb-6"></div>
                     </div>
                     <div class="flex items-center justify-between pt-2 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$2.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
                     </div>
                 </div>
 
-                <!-- Chocolate Blanco -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Agotado
+                        Próximamente
                     </div>
                     <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
                         <img src="Img/alfajorblanco.png" alt="Chocolate Blanco" class="w-full h-full object-contain object-center rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                     </div>
                     <div class="flex-grow flex flex-col">
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Chocolate Blanco (1 Unidad)</h3>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Chocolate Blanco (Unidad)</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Delicado y sedoso baño de chocolate blanco belga de alta pureza.</p>
                         <div class="w-12 h-[1px] bg-[#E6DCD0] mb-6"></div>
                     </div>
                     <div class="flex items-center justify-between pt-2 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$2.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
                     </div>
                 </div>
 
@@ -344,52 +335,29 @@
             const btnRegalar = document.getElementById('tab-regalar');
             const btnAlfajores = document.getElementById('tab-alfajores');
 
-            btnDestacados.className = "px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300";
-            btnRegalar.className = "px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300";
-            btnAlfajores.className = "px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300";
+            btnDestacados.className = "px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300";
+            btnRegalar.className = "px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300";
+            btnAlfajores.className = "px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300";
 
             document.getElementById('content-' + tabName).classList.remove('hidden');
-            document.getElementById('tab-' + tabName).className = "px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-darkBrown text-white shadow-sm transition-all duration-300";
+            document.getElementById('tab-' + tabName).className = "px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-darkBrown text-white shadow-sm transition-all duration-300";
         }
     </script>
 
-    <!-- FOOTER REFINADO: COLOR EXACTO DE Img/6.png, LOGO GRANDE Y SIN BASURA -->
-    <footer class="py-20 px-6 md:px-12 border-t border-[#E6DCD0]" style="background-color: #fbf2e3;">
+    <!-- FOOTER -->
+    <footer class="py-20 px-6 md:px-12 border-t border-[#E6DCD0]" style="background-color: #F8F3EA;">
         <div class="max-w-[85%] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
             <div>
                 <img src="Img/logoTail.png" alt="Oleo Alfajores Logo" class="h-24 w-auto mx-auto md:mx-0 mb-4">
                 <p class="text-stone-600 text-xs tracking-wider">Alfajores de alta pastelería • Santiago, Chile</p>
+            </div>
+            <div>
+                <a href="faq.html" class="text-xs font-bold uppercase tracking-widest text-darkBrown hover:text-accent transition">Preguntas Frecuentes (FAQ)</a>
             </div>
             <div class="text-stone-500 text-xs font-medium tracking-wide">
                 &copy; 2026 oleo Alfajorería. Todos los derechos reservados.
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const words = ["sentir", "compartir", "saborear", "regalar"];
-            let currentIndex = 0;
-            const wordElement = document.getElementById("hero-dynamic-word");
-
-            if(wordElement) {
-                wordElement.style.transition = "all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
-                setInterval(() => {
-                    wordElement.style.transform = "translateY(20px)";
-                    wordElement.style.opacity = "0";
-                    setTimeout(() => {
-                        currentIndex = (currentIndex + 1) % words.length;
-                        wordElement.textContent = words[currentIndex];
-                        wordElement.style.transition = "none"; 
-                        wordElement.style.transform = "translateY(-20px)";
-                        void wordElement.offsetWidth;
-                        wordElement.style.transition = "all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
-                        wordElement.style.transform = "translateY(0)";
-                        wordElement.style.opacity = "1";
-                    }, 500); 
-                }, 2500);
-            }
-        });
-    </script>
 </body>
 </html>
