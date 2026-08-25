@@ -130,7 +130,7 @@
                     Destacados
                 </button>
                 <button onclick="switchTab('regalar')" id="tab-regalar" class="px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300">
-                    Para regalar
+                    Regalar & Compartir
                 </button>
                 <button onclick="switchTab('alfajores')" id="tab-alfajores" class="px-6 md:px-8 py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest bg-white border border-[#E6DCD0] text-stone-600 hover:border-darkBrown transition-all duration-300">
                     Alfajores
@@ -140,7 +140,7 @@
             <!-- CONTENEDOR DE PESTAÑAS -->
             
             <!-- 1. DESTACADOS -->
-            <div id="content-destacados" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+            <div id="content-destacados" class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14">
                 
                 <!-- Producto 1: Caja Clásica -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
@@ -149,18 +149,18 @@
                     </div>
                     <div>
                         <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/cajaclasica.png" alt="Caja Clásica" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                            <img src="Img/cajaclasica.png" alt="Caja Oleo" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                         </div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Clásica</h3>
-                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Nuestra caja de regalo estrella con manjar blanco artesanal y chocolate belga 44% cacao.</p>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Oleo</h3>
+                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Arma tu caja con 6 alfajores a elección: bitter, de leche o blanco. Combina como quieras.</p>
                         
                         <!-- Bloque de 3 iconos informativos -->
                         <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
                             <!-- 1. Gramaje Potenciado / 480g -->
                             <div class="flex flex-col items-center justify-center">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">480g NETOS</span>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">510g NETOS</span>
                                 <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Formato caja</span>
                             </div>
                             <!-- 2. Artesano / Manjar blanco (Icono actualizado) -->
@@ -173,29 +173,29 @@
                             <div class="flex flex-col items-center justify-center">
                                 <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
                                 <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
-                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">44% Cacao</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">A elección</span>
                             </div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$14.990</span>
-                        <a href="https://wa.me/56920719565?text=Hola,%20quiero%20comprar%20la%20Caja%20Clásica" target="_blank" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
+                        <button onclick="openCustomizer('caja6')" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Producto 2: Clásico (1 Unidad) -->
+                <!-- Producto 2: De Leche (1 Unidad) -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-500 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Individual
                     </div>
                     <div>
                         <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorclasico.png" alt="Clásico Unitario" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                            <img src="Img/alfajorclasico.png" alt="De Leche Unitario" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                         </div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Clásico</h3>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">De Leche</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual con manjar blanco artesanal y chocolate belga 44% cacao.</p>
                         
                         <!-- Bloque de 3 iconos informativos -->
@@ -203,7 +203,7 @@
                             <!-- 1. Gramaje Potenciado / 80g -->
                             <div class="flex flex-col items-center justify-center">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">80g NETOS</span>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">85g NETOS</span>
                                 <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Por unidad</span>
                             </div>
                             <!-- 2. Artesano / Manjar blanco (Icono actualizado) -->
@@ -222,34 +222,32 @@
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$2.690</span>
-                        <a href="https://wa.me/56920719565?text=Hola,%20quiero%20comprar%20un%20alfajor%20Clásico" target="_blank" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                        </a>
+                        <div class="quickadd flex justify-end" data-id="unit-clasico" data-name="De Leche" data-price="2690"></div>
                     </div>
                 </div>
 
-                <!-- Producto 3: Caja Surtida -->
+                <!-- Producto 3: Set de 3 -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
-                    <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Agotado
+                    <div class="absolute top-6 left-6 z-10 bg-primary text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Nuevo
                     </div>
                     <div>
                         <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/cajasurtida.png" alt="Caja Surtida" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                            <img src="Img/set3.jpeg" alt="Set de 3" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                         </div>
-                        <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Surtida</h3>
-                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Selección equilibrada para explorar diferentes perfiles de sabor en formato de regalo.</p>
-                        
+                        <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Pack de 3 Unidades</span>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Set de 3</h3>
+                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Elige 3 alfajores combinados como quieras: bitter, de leche o blanco. Ideal para compartir.</p>
+
                         <!-- Bloque de 3 iconos informativos -->
                         <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
-                            <!-- 1. Gramaje Potenciado / 480g -->
+                            <!-- 1. Gramaje Potenciado / 255g -->
                             <div class="flex flex-col items-center justify-center">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">480g NETOS</span>
-                                <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Formato caja</span>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">255g NETOS</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Pack de 3</span>
                             </div>
-                            <!-- 2. Artesano / Manjar blanco (Icono actualizado) -->
+                            <!-- 2. Artesano / Manjar blanco -->
                             <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                                 <span class="text-[11px] font-bold text-darkBrown">Manjar blanco</span>
@@ -259,94 +257,19 @@
                             <div class="flex flex-col items-center justify-center">
                                 <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
                                 <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
-                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Variedad</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">A elección</span>
                             </div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$14.990</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. PARA REGALAR -->
-            <div id="content-regalar" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
-                
-                <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
-                    <div class="absolute top-6 left-6 z-10 bg-accent text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Más vendido
-                    </div>
-                    <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/cajaclasica.png" alt="Caja Clásica" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
-                        <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Clásica</h3>
-                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Presentación de regalo con manjar blanco artesanal y chocolate belga 44% cacao.</p>
-                        
-                        <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
-                            <div class="flex flex-col items-center justify-center">
-                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">480g NETOS</span>
-                                <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Formato caja</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
-                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-                                <span class="text-[11px] font-bold text-darkBrown">Manjar blanco</span>
-                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Artesanal</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-center">
-                                <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
-                                <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
-                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">44% Cacao</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$14.990</span>
-                        <a href="https://wa.me/56920719565?text=Hola,%20quiero%20comprar%20la%20Caja%20Clásica" target="_blank" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
+                        <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$7.790</span>
+                        <button onclick="openCustomizer('set3')" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
-                    <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Agotado
-                    </div>
-                    <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/cajasurtida.png" alt="Caja Surtida" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
-                        <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Surtida</h3>
-                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Selección equilibrada para explorar diferentes perfiles de sabor en formato de regalo.</p>
-                        
-                        <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
-                            <div class="flex flex-col items-center justify-center">
-                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">480g NETOS</span>
-                                <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Formato caja</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
-                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-                                <span class="text-[11px] font-bold text-darkBrown">Manjar blanco</span>
-                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Artesanal</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-center">
-                                <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
-                                <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
-                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Variedad</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$14.990</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
-                    </div>
-                </div>
-
+                <!-- Producto 4: Caja Edición de Autor (Agotada) -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Próximamente
@@ -358,11 +281,11 @@
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Edición de Autor</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Edición exclusiva con combinaciones vanguardistas de pastelería de autor.</p>
-                        
+
                         <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
                             <div class="flex flex-col items-center justify-center">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">480g NETOS</span>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">510g NETOS</span>
                                 <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Formato caja</span>
                             </div>
                             <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
@@ -378,7 +301,126 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$14.990</span>
+                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$16.990</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. REGALAR & COMPARTIR -->
+            <div id="content-regalar" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+
+                <!-- Caja Oleo (6 unidades) -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
+                    <div class="absolute top-6 left-6 z-10 bg-accent text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Más vendido
+                    </div>
+                    <div>
+                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
+                            <img src="Img/cajaclasica.png" alt="Caja Oleo" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                        </div>
+                        <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Oleo</h3>
+                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Arma tu caja con 6 alfajores a elección: bitter, de leche o blanco. Combina como quieras.</p>
+
+                        <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
+                            <div class="flex flex-col items-center justify-center">
+                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">510g NETOS</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Formato caja</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
+                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                                <span class="text-[11px] font-bold text-darkBrown">Manjar blanco</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Artesanal</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
+                                <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">A elección</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 mt-auto">
+                        <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$14.990</span>
+                        <button onclick="openCustomizer('caja6')" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Set de 3 (nuevo producto) -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
+                    <div class="absolute top-6 left-6 z-10 bg-primary text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Nuevo
+                    </div>
+                    <div>
+                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
+                            <img src="Img/set3.jpeg" alt="Set de 3" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                        </div>
+                        <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Pack de 3 Unidades</span>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Set de 3</h3>
+                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Elige 3 alfajores combinados como quieras: bitter, de leche o blanco. Ideal para compartir.</p>
+
+                        <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
+                            <div class="flex flex-col items-center justify-center">
+                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">255g NETOS</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Pack de 3</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
+                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                                <span class="text-[11px] font-bold text-darkBrown">Manjar blanco</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Artesanal</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
+                                <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">A elección</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 mt-auto">
+                        <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$7.790</span>
+                        <button onclick="openCustomizer('set3')" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caja Edición de Autor -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
+                    <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Próximamente
+                    </div>
+                    <div>
+                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
+                            <img src="Img/cajasurtida.png" alt="Caja de Autor" class="w-full h-full object-cover rounded-lg saturate-0 opacity-75 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                        </div>
+                        <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Edición de Autor</h3>
+                        <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Edición exclusiva con combinaciones vanguardistas de pastelería de autor.</p>
+
+                        <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
+                            <div class="flex flex-col items-center justify-center">
+                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">510g NETOS</span>
+                                <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Formato caja</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
+                                <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                                <span class="text-[11px] font-bold text-darkBrown">Manjar blanco</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Artesanal</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
+                                <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">Exclusivo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 mt-auto">
+                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$16.990</span>
                         <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Próximamente</span>
                     </div>
                 </div>
@@ -387,23 +429,24 @@
 
             <!-- 3. ALFAJORES -->
             <div id="content-alfajores" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
-                
+
+                <!-- De Leche -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
                     <div class="absolute top-6 left-6 z-10 bg-stone-500 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
                         Individual
                     </div>
                     <div>
                         <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorclasico.png" alt="Clásico Unitario" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                            <img src="Img/alfajorclasico.png" alt="De Leche Unitario" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                         </div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
-                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Clásico</h3>
+                        <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">De Leche</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual con manjar blanco artesanal y chocolate belga 44% cacao.</p>
-                        
+
                         <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
                             <div class="flex flex-col items-center justify-center">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">80g NETOS</span>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">85g NETOS</span>
                                 <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Por unidad</span>
                             </div>
                             <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
@@ -420,28 +463,27 @@
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
                         <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$2.690</span>
-                        <a href="https://wa.me/56920719565?text=Hola,%20quiero%20comprar%20un%20alfajor%20Clásico" target="_blank" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                        </a>
+                        <div class="quickadd flex justify-end" data-id="unit-clasico" data-name="De Leche" data-price="2690"></div>
                     </div>
                 </div>
 
+                <!-- Bitter -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
-                    <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Agotado
+                    <div class="absolute top-6 left-6 z-10 bg-stone-500 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Individual
                     </div>
                     <div>
                         <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorbitter.png" alt="Bitter" class="w-full h-full object-contain object-center rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                            <img src="Img/alfajorbitter.png" alt="Bitter" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                         </div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Chocolate Bitter</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual bañado en auténtico chocolate belga bitter con notas profundas.</p>
-                        
+
                         <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
                             <div class="flex flex-col items-center justify-center">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">80g NETOS</span>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">85g NETOS</span>
                                 <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Por unidad</span>
                             </div>
                             <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
@@ -452,32 +494,33 @@
                             <div class="flex flex-col items-center justify-center">
                                 <img src="Img/banderabelga.png" alt="Bélgica" class="w-4 h-4 rounded-full object-cover mb-0.5 shadow-sm">
                                 <span class="text-[11px] font-bold text-darkBrown">Chocolate belga</span>
-                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">70% Cacao</span>
+                                <span class="text-[9px] text-stone-400 uppercase tracking-tighter">55% Cacao</span>
                             </div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$2.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
+                        <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$2.690</span>
+                        <div class="quickadd flex justify-end" data-id="unit-bitter" data-name="Chocolate Bitter" data-price="2690"></div>
                     </div>
                 </div>
 
+                <!-- Blanco -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
-                    <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Agotado
+                    <div class="absolute top-6 left-6 z-10 bg-stone-500 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Individual
                     </div>
                     <div>
                         <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorblanco.png" alt="Chocolate Blanco" class="w-full h-full object-contain object-center rounded-lg opacity-85 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                            <img src="Img/alfajorblanco.png" alt="Chocolate Blanco" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
                         </div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Chocolate Blanco</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual con delicado y sedoso baño de chocolate blanco belga de alta pureza.</p>
-                        
+
                         <div class="grid grid-cols-3 gap-1 py-3 my-2 border-t border-b border-[#F0EBE1] text-center">
                             <div class="flex flex-col items-center justify-center">
                                 <svg class="w-4 h-4 text-darkBrown mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">80g NETOS</span>
+                                <span class="text-[11px] font-extrabold text-darkBrown tracking-tight">85g NETOS</span>
                                 <span class="text-[8px] text-stone-400 uppercase tracking-tighter">Por unidad</span>
                             </div>
                             <div class="flex flex-col items-center justify-center border-x border-[#F0EBE1] px-1">
@@ -493,8 +536,8 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$2.690</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
+                        <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$2.690</span>
+                        <div class="quickadd flex justify-end" data-id="unit-blanco" data-name="Chocolate Blanco" data-price="2690"></div>
                     </div>
                 </div>
 
@@ -574,6 +617,400 @@
 
     </div>
 </footer>
+
+    <!-- MODAL: Personalizador Set de 3 -->
+    <div id="customizerModal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <div id="customizerOverlay" onclick="closeCustomizer()" class="absolute inset-0 bg-darkBrown/60 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-2xl w-full max-w-md p-6 md:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCustomizer()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full text-stone-400 hover:text-darkBrown hover:bg-stone-100 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <span id="customizerLabel" class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Pack de 3 Unidades</span>
+            <h3 id="customizerTitle" class="font-bold text-xl text-darkBrown mb-2 tracking-tight">Arma tu Set de 3</h3>
+            <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Elige la combinación de tus alfajores.</p>
+
+            <div class="space-y-3 mb-6">
+                <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">
+                    <div class="flex items-center gap-3">
+                        <img src="Img/alfajorclasico.png" alt="De Leche" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
+                        <div>
+                            <p class="text-sm font-bold text-darkBrown">De Leche</p>
+                            <p class="text-[10px] text-stone-400 uppercase tracking-tighter">44% Cacao</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="customizerChange('clasico', -1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">−</button>
+                        <span id="qty-clasico" class="w-4 text-center text-sm font-bold text-darkBrown">0</span>
+                        <button onclick="customizerChange('clasico', 1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">+</button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">
+                    <div class="flex items-center gap-3">
+                        <img src="Img/alfajorbitter.png" alt="Bitter" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
+                        <div>
+                            <p class="text-sm font-bold text-darkBrown">Bitter</p>
+                            <p class="text-[10px] text-stone-400 uppercase tracking-tighter">55% Cacao</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="customizerChange('bitter', -1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">−</button>
+                        <span id="qty-bitter" class="w-4 text-center text-sm font-bold text-darkBrown">0</span>
+                        <button onclick="customizerChange('bitter', 1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">+</button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">
+                    <div class="flex items-center gap-3">
+                        <img src="Img/alfajorblanco.png" alt="Blanco" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
+                        <div>
+                            <p class="text-sm font-bold text-darkBrown">Blanco</p>
+                            <p class="text-[10px] text-stone-400 uppercase tracking-tighter">Chocolate blanco</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="customizerChange('blanco', -1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">−</button>
+                        <span id="qty-blanco" class="w-4 text-center text-sm font-bold text-darkBrown">0</span>
+                        <button onclick="customizerChange('blanco', 1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-4">
+                <span id="customizerCountLabel" class="text-xs font-semibold text-stone-500">0 / 3 seleccionados</span>
+                <span id="customizerPrice" class="text-lg font-extrabold text-darkBrown">$7.790</span>
+            </div>
+
+            <button id="customizerSubmit" onclick="addCustomizerToCart()" disabled class="w-full py-3.5 rounded-full bg-stone-300 text-white text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-not-allowed">
+                Completa tu selección
+            </button>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE: Carrito -->
+    <button id="cartFab" onclick="openCart()" class="fixed bottom-6 right-6 z-40 w-14 h-14 md:w-16 md:h-16 bg-darkBrown text-white rounded-full shadow-lg flex items-center justify-center hover:bg-accent transition-colors duration-300">
+        <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m-10 0a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4z"/></svg>
+        <span id="cartBadge" class="hidden absolute -top-1 -right-1 bg-accent text-white text-[10px] font-bold rounded-full min-w-[20px] h-5 px-1 flex items-center justify-center border-2 border-sand">0</span>
+    </button>
+
+    <!-- MODAL: Carrito de compra -->
+    <div id="cartModal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <div id="cartOverlay" onclick="closeCart()" class="absolute inset-0 bg-darkBrown/60 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-2xl w-full max-w-lg shadow-2xl max-h-[90vh] flex flex-col">
+            <div class="p-6 md:p-8 pb-0 relative">
+                <button onclick="closeCart()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full text-stone-400 hover:text-darkBrown hover:bg-stone-100 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+                <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Tu pedido</span>
+                <h3 class="font-bold text-xl text-darkBrown mb-2 tracking-tight">Carrito</h3>
+                <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-4">Revisa tu pedido antes de enviarlo por WhatsApp.</p>
+            </div>
+
+            <div class="flex-1 overflow-y-auto px-6 md:px-8">
+                <div id="cartItemsContainer" class="space-y-3 pb-4"></div>
+                <div id="cartEmptyState" class="hidden text-center text-stone-400 text-sm py-10">Tu carrito está vacío.</div>
+            </div>
+
+            <div class="p-6 md:p-8 pt-4 border-t border-[#F0EBE1]">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-semibold text-stone-500 uppercase tracking-widest">Total</span>
+                    <span id="cartTotal" class="text-xl font-extrabold text-darkBrown">$0</span>
+                </div>
+                <button id="cartCheckoutBtn" onclick="sendCartOrder()" disabled class="w-full py-3.5 rounded-full bg-stone-300 text-white text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-not-allowed">
+                    Hacer pedido por WhatsApp
+                </button>
+                <button onclick="clearCart()" class="w-full mt-2 py-2 text-[11px] text-stone-400 hover:text-accent uppercase tracking-widest font-semibold transition-colors">
+                    Vaciar carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST: Confirmación de agregado al carrito -->
+    <div id="cartToast" class="hidden fixed bottom-24 md:bottom-28 left-1/2 -translate-x-1/2 z-[70] bg-darkBrown text-white text-xs font-semibold px-5 py-3 rounded-full shadow-lg transition-opacity duration-300 whitespace-nowrap">
+        Agregado al carrito
+    </div>
+
+    <!-- SCRIPT: Carrito y Personalizador (Set de 3 / Caja Oleo) -->
+    <script>
+        // ---------- CARRITO ----------
+        const CART_STORAGE_KEY = 'oleoCart';
+        let cart = loadCart();
+        let cartToastTimeout = null;
+
+        function loadCart() {
+            try {
+                const raw = localStorage.getItem(CART_STORAGE_KEY);
+                const parsed = raw ? JSON.parse(raw) : [];
+                return Array.isArray(parsed) ? parsed : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+            } catch (e) {}
+        }
+
+        function formatPrice(n) {
+            return '$' + Math.round(n).toLocaleString('es-CL');
+        }
+
+        function cartTotalCount() {
+            return cart.reduce((sum, item) => sum + item.qty, 0);
+        }
+
+        function cartTotalPrice() {
+            return cart.reduce((sum, item) => sum + item.qty * item.unitPrice, 0);
+        }
+
+        function addToCart(id, name, unitPrice, detail, qtyToAdd, silent) {
+            qtyToAdd = qtyToAdd || 1;
+            detail = detail || null;
+            const existing = cart.find(i => i.id === id);
+            if (existing) {
+                existing.qty += qtyToAdd;
+            } else {
+                cart.push({ id: id, name: name, detail: detail, unitPrice: unitPrice, qty: qtyToAdd });
+            }
+            saveCart();
+            refreshCartUI();
+            if (!silent) showCartToast(name + ' agregado al carrito');
+        }
+
+        function cartChangeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            saveCart();
+            refreshCartUI();
+        }
+
+        function cartRemoveItem(id) {
+            cart = cart.filter(i => i.id !== id);
+            saveCart();
+            refreshCartUI();
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCart();
+            refreshCartUI();
+        }
+
+        function refreshCartUI() {
+            renderCart();
+            updateCartBadge();
+            renderQuickAddButtons();
+        }
+
+        function updateCartBadge() {
+            const badge = document.getElementById('cartBadge');
+            const count = cartTotalCount();
+            if (count > 0) {
+                badge.textContent = count > 99 ? '99+' : count;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+        }
+
+        function renderQuickAddButtons() {
+            document.querySelectorAll('.quickadd').forEach(el => {
+                const id = el.dataset.id;
+                const name = el.dataset.name;
+                const price = parseInt(el.dataset.price, 10);
+                const item = cart.find(i => i.id === id);
+                const qty = item ? item.qty : 0;
+
+                if (qty === 0) {
+                    el.innerHTML = '<button onclick="addToCart(\'' + id + '\', \'' + name + '\', ' + price + ')" class="w-11 h-11 bg-darkBrown text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200 shadow-sm">' +
+                        '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>' +
+                    '</button>';
+                } else {
+                    el.innerHTML = '<div class="flex items-center gap-2">' +
+                        '<button onclick="cartChangeQty(\'' + id + '\', -1)" class="w-9 h-9 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">−</button>' +
+                        '<span class="w-5 text-center text-sm font-bold text-darkBrown">' + qty + '</span>' +
+                        '<button onclick="cartChangeQty(\'' + id + '\', 1)" class="w-9 h-9 rounded-full bg-darkBrown text-white flex items-center justify-center hover:bg-accent transition-colors">+</button>' +
+                    '</div>';
+                }
+            });
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cartItemsContainer');
+            const emptyState = document.getElementById('cartEmptyState');
+            const checkoutBtn = document.getElementById('cartCheckoutBtn');
+
+            if (cart.length === 0) {
+                container.innerHTML = '';
+                container.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                checkoutBtn.disabled = true;
+                checkoutBtn.className = 'w-full py-3.5 rounded-full bg-stone-300 text-white text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-not-allowed';
+            } else {
+                emptyState.classList.add('hidden');
+                container.classList.remove('hidden');
+                checkoutBtn.disabled = false;
+                checkoutBtn.className = 'w-full py-3.5 rounded-full bg-darkBrown text-white text-xs font-bold uppercase tracking-widest hover:bg-accent transition-colors duration-300 cursor-pointer';
+                container.innerHTML = cart.map(item => {
+                    const detailHtml = item.detail ? '<p class="text-[10px] text-stone-400 truncate">' + item.detail + '</p>' : '';
+                    return '' +
+                        '<div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">' +
+                            '<div class="flex-1 min-w-0">' +
+                                '<p class="text-sm font-bold text-darkBrown truncate">' + item.name + '</p>' +
+                                detailHtml +
+                                '<p class="text-xs text-stone-500 mt-0.5">' + formatPrice(item.unitPrice) + ' c/u</p>' +
+                            '</div>' +
+                            '<div class="flex items-center gap-2 shrink-0">' +
+                                '<button onclick="cartChangeQty(\'' + item.id + '\', -1)" class="w-6 h-6 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors text-xs">−</button>' +
+                                '<span class="w-4 text-center text-sm font-bold text-darkBrown">' + item.qty + '</span>' +
+                                '<button onclick="cartChangeQty(\'' + item.id + '\', 1)" class="w-6 h-6 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors text-xs">+</button>' +
+                                '<button onclick="cartRemoveItem(\'' + item.id + '\')" class="ml-1 text-stone-300 hover:text-accent transition-colors" title="Quitar">' +
+                                    '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>' +
+                                '</button>' +
+                            '</div>' +
+                        '</div>';
+                }).join('');
+            }
+            document.getElementById('cartTotal').textContent = formatPrice(cartTotalPrice());
+        }
+
+        function openCart() {
+            renderCart();
+            document.getElementById('cartModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function sendCartOrder() {
+            if (cart.length === 0) return;
+            const lines = cart.map(item => {
+                const base = '• ' + item.qty + 'x ' + item.name;
+                return item.detail ? base + ' (' + item.detail + ')' : base;
+            });
+            const message = 'Hola, quiero hacer el siguiente pedido:\n' + lines.join('\n') + '\n\nTotal: ' + formatPrice(cartTotalPrice());
+            window.open('https://wa.me/56920719565?text=' + encodeURIComponent(message), '_blank');
+        }
+
+        function showCartToast(text) {
+            const toast = document.getElementById('cartToast');
+            toast.textContent = text;
+            toast.classList.remove('hidden');
+            toast.style.opacity = '1';
+            if (cartToastTimeout) clearTimeout(cartToastTimeout);
+            cartToastTimeout = setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.classList.add('hidden'), 300);
+            }, 1800);
+        }
+
+        // ---------- PERSONALIZADOR (Set de 3 / Caja Oleo) ----------
+        const customizerConfigs = {
+            set3: {
+                total: 3,
+                price: 7790,
+                cartName: 'Set de 3',
+                label: 'Pack de 3 Unidades',
+                title: 'Arma tu Set de 3'   
+            },
+            caja6: {
+                total: 6,
+                price: 14990,
+                cartName: 'Caja Oleo',
+                label: 'Caja de 6 Unidades',
+                title: 'Arma tu Caja Oleo'
+            }
+        };
+        const customizerFlavorNames = { clasico: 'De Leche', bitter: 'Bitter', blanco: 'Blanco' };
+        const customizerState = { key: null, quantities: { clasico: 0, bitter: 0, blanco: 0 } };
+
+        function openCustomizer(productKey) {
+            const config = customizerConfigs[productKey];
+            if (!config) return;
+            customizerState.key = productKey;
+            customizerState.quantities = { clasico: 0, bitter: 0, blanco: 0 };
+
+            document.getElementById('customizerLabel').textContent = config.label;
+            document.getElementById('customizerTitle').textContent = config.title;
+            document.getElementById('customizerPrice').textContent = formatPrice(config.price);
+            Object.keys(customizerState.quantities).forEach(flavor => {
+                document.getElementById('qty-' + flavor).textContent = '0';
+            });
+
+            updateCustomizerSummary();
+            document.getElementById('customizerModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCustomizer() {
+            document.getElementById('customizerModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function customizerChange(flavor, delta) {
+            const config = customizerConfigs[customizerState.key];
+            if (!config) return;
+            const total = Object.values(customizerState.quantities).reduce((a, b) => a + b, 0);
+            const next = customizerState.quantities[flavor] + delta;
+            if (next < 0) return;
+            if (delta > 0 && total >= config.total) return;
+
+            customizerState.quantities[flavor] = next;
+            document.getElementById('qty-' + flavor).textContent = next;
+            updateCustomizerSummary();
+        }
+
+        function updateCustomizerSummary() {
+            const config = customizerConfigs[customizerState.key];
+            if (!config) return;
+            const total = Object.values(customizerState.quantities).reduce((a, b) => a + b, 0);
+            document.getElementById('customizerCountLabel').textContent = total + ' / ' + config.total + ' seleccionados';
+
+            const submitBtn = document.getElementById('customizerSubmit');
+            if (total === config.total) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Agregar al carrito';
+                submitBtn.className = 'w-full py-3.5 rounded-full bg-darkBrown text-white text-xs font-bold uppercase tracking-widest hover:bg-accent transition-colors duration-300 cursor-pointer';
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Completa tu selección';
+                submitBtn.className = 'w-full py-3.5 rounded-full bg-stone-300 text-white text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-not-allowed';
+            }
+        }
+
+        function addCustomizerToCart() {
+            const config = customizerConfigs[customizerState.key];
+            if (!config) return;
+            const total = Object.values(customizerState.quantities).reduce((a, b) => a + b, 0);
+            if (total !== config.total) return;
+
+            const entries = Object.entries(customizerState.quantities).filter(([, qty]) => qty > 0);
+            const detail = entries.map(([flavor, qty]) => qty + ' ' + customizerFlavorNames[flavor]).join(', ');
+            const comboId = customizerState.key + '::' + entries.map(([flavor, qty]) => flavor + '-' + qty).sort().join('_');
+
+            addToCart(comboId, config.cartName, config.price, detail, 1);
+            closeCustomizer();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeCustomizer();
+                closeCart();
+            }
+        });
+
+        refreshCartUI();
+    </script>
+
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const words = ["regalar", "compartir", "saborear", "sentir"];
