@@ -47,6 +47,28 @@
         src="https://www.facebook.com/tr?id=1565991871836582&ev=PageView&noscript=1"
         /></noscript>
 <!-- End Meta Pixel Code -->
+    <style>
+        .product-gallery { cursor: pointer; }
+        .product-gallery::after {
+            content: "Ver más";
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            transform: translateX(-50%);
+            background: rgba(28, 25, 23, 0.75);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 999px;
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+            pointer-events: none;
+        }
+        .product-gallery:hover::after { opacity: 1; }
+    </style>
 </head>
 <body class="bg-sand text-darkBrown antialiased selection:bg-accent selection:text-white w-full overflow-x-hidden"> 
 
@@ -166,9 +188,7 @@
                         Destacado
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/cajaclasica.png" alt="Caja Oleo" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4" data-images="Img/0_cajaoleo.png,Img/1_cajaoleo.png,Img/2_cajaoleo.png,Img/3_cajaoleo.png,Img/4_cajaoleo.png" data-alt="Caja Oleo" data-fit="cover"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Oleo</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Arma tu caja con 6 alfajores a elección: bitter, de leche o blanco. Combina como quieras.</p>
@@ -209,9 +229,7 @@
                         Individual
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorclasico.png" alt="De Leche Unitario" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3" data-images="Img/1_unitario_leche.png,Img/2_unitario_leche.png,Img/0_unitario_leche.png" data-alt="De Leche Unitario" data-fit="contain"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">De Leche</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual con manjar blanco artesanal y chocolate belga 44% cacao.</p>
@@ -250,9 +268,7 @@
                         Nuevo
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/set3.jpeg" alt="Set de 3" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4" data-images="Img/0_set3.png,Img/2_set3.png,Img/3_set3.png" data-alt="Set de 3" data-fit="cover"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Pack de 3 Unidades</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Set de 3</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Elige 3 alfajores combinados como quieras: bitter, de leche o blanco. Ideal para compartir.</p>
@@ -334,9 +350,7 @@
                         Más vendido
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/cajaclasica.png" alt="Caja Oleo" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4" data-images="Img/0_cajaoleo.png,Img/1_cajaoleo.png,Img/2_cajaoleo.png" data-alt="Caja Oleo" data-fit="cover"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Caja de 6 Unidades</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Caja Oleo</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Arma tu caja con 6 alfajores a elección: bitter, de leche o blanco. Combina como quieras.</p>
@@ -373,9 +387,7 @@
                         Nuevo
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4">
-                            <img src="Img/set3.jpeg" alt="Set de 3" class="w-full h-full object-cover rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-4" data-images="Img/0_set3.png,Img/2_set3.png,Img/3_set3.png" data-alt="Set de 3" data-fit="cover"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Pack de 3 Unidades</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Set de 3</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Elige 3 alfajores combinados como quieras: bitter, de leche o blanco. Ideal para compartir.</p>
@@ -454,9 +466,7 @@
                         Individual
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorclasico.png" alt="De Leche Unitario" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3" data-images="Img/1_unitario_leche.png,Img/2_unitario_leche.png,Img/0_unitario_leche.png" data-alt="De Leche Unitario" data-fit="contain"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">De Leche</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual con manjar blanco artesanal y chocolate belga 44% cacao.</p>
@@ -491,9 +501,7 @@
                         Individual
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorbitter.png" alt="Bitter" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3" data-images="Img/1_unitario_bitter.png,Img/2_unitario_bitter.png,Img/0_unitario_bitter.png" data-alt="Bitter" data-fit="contain"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Chocolate Bitter</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual bañado en auténtico chocolate belga bitter con notas profundas.</p>
@@ -528,9 +536,7 @@
                         Individual
                     </div>
                     <div>
-                        <div class="aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3">
-                            <img src="Img/alfajorblanco.png" alt="Chocolate Blanco" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out">
-                        </div>
+                        <div class="product-gallery aspect-[4/3] bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-3" data-images="Img/1_unitario_blanco.png,Img/2_unitario_blanco.png,Img/0_unitario_blanco.png" data-alt="Chocolate Blanco" data-fit="contain"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Chocolate Blanco</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual con delicado y sedoso baño de chocolate blanco belga de alta pureza.</p>
@@ -651,7 +657,7 @@
             <div class="space-y-3 mb-6">
                 <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">
                     <div class="flex items-center gap-3">
-                        <img src="Img/alfajorclasico.png" alt="De Leche" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
+                        <img src="Img/0_unitario_leche.png" alt="De Leche" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
                         <div>
                             <p class="text-sm font-bold text-darkBrown">De Leche</p>
                             <p class="text-[10px] text-stone-400 uppercase tracking-tighter">44% Cacao</p>
@@ -665,7 +671,7 @@
                 </div>
                 <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">
                     <div class="flex items-center gap-3">
-                        <img src="Img/alfajorbitter.png" alt="Bitter" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
+                        <img src="Img/0_unitario_bitter.png" alt="Bitter" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
                         <div>
                             <p class="text-sm font-bold text-darkBrown">Bitter</p>
                             <p class="text-[10px] text-stone-400 uppercase tracking-tighter">55% Cacao</p>
@@ -679,7 +685,7 @@
                 </div>
                 <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">
                     <div class="flex items-center gap-3">
-                        <img src="Img/alfajorblanco.png" alt="Blanco" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
+                        <img src="Img/0_unitario_blanco.png" alt="Blanco" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
                         <div>
                             <p class="text-sm font-bold text-darkBrown">Blanco</p>
                             <p class="text-[10px] text-stone-400 uppercase tracking-tighter">Chocolate blanco</p>
@@ -1027,6 +1033,153 @@
         });
 
         refreshCartUI();
+    </script>
+
+    <!-- MODAL: Vista rápida de producto (fotos grandes + info, sin datos nuevos) -->
+    <div id="quickViewModal" class="hidden fixed inset-0 z-[65] flex items-center justify-center p-4">
+        <div id="quickViewOverlay" onclick="closeQuickView()" class="absolute inset-0 bg-darkBrown/60 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-2xl w-full max-w-2xl shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 text-stone-400 hover:text-darkBrown hover:bg-stone-100 transition-colors shadow-sm">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div id="quickViewGalleryWrap" class="aspect-[4/3] md:aspect-auto bg-stone-50/60 relative flex items-center justify-center p-4 overflow-hidden"></div>
+                <div class="p-6 md:p-8 flex flex-col">
+                    <span id="quickViewLabel" class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1"></span>
+                    <h3 id="quickViewTitle" class="font-bold text-2xl text-darkBrown mb-3 tracking-tight"></h3>
+                    <p id="quickViewDescription" class="text-stone-500 text-sm font-light leading-relaxed mb-4"></p>
+                    <div id="quickViewSpecs" class="mb-4"></div>
+                    <div class="flex items-center justify-between pt-4 mt-auto border-t border-[#F0EBE1]">
+                        <span id="quickViewPrice" class="text-2xl font-extrabold text-darkBrown"></span>
+                        <div id="quickViewCta"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT: Galería de fotos por producto (n imágenes, editable en data-images) + Vista rápida -->
+    <script>
+        function initGallery(gallery) {
+            const images = (gallery.dataset.images || '').split(',').map(s => s.trim()).filter(Boolean);
+            if (images.length === 0) return;
+
+            const alt = gallery.dataset.alt || '';
+            const fitClass = gallery.dataset.fit === 'contain' ? 'object-contain object-center' : 'object-cover';
+            let index = 0;
+
+            function render() {
+                let html = '<img src="' + images[index] + '" alt="' + alt + '" class="w-full h-full ' + fitClass + ' rounded-lg group-hover:scale-[1.03] transition-transform duration-500 ease-out select-none pointer-events-none">';
+
+                if (images.length > 1) {
+                    html +=
+                        '<button type="button" class="gallery-prev absolute left-1 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white/85 text-darkBrown flex items-center justify-center shadow-sm hover:bg-white transition-colors">' +
+                            '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>' +
+                        '</button>' +
+                        '<button type="button" class="gallery-next absolute right-1 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white/85 text-darkBrown flex items-center justify-center shadow-sm hover:bg-white transition-colors">' +
+                            '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>' +
+                        '</button>' +
+                        '<div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">' +
+                            images.map((_, i) => '<span class="w-1.5 h-1.5 rounded-full ' + (i === index ? 'bg-darkBrown' : 'bg-white/90 border border-darkBrown/20') + '"></span>').join('') +
+                        '</div>';
+                }
+
+                gallery.innerHTML = html;
+
+                if (images.length > 1) {
+                    gallery.querySelector('.gallery-prev').addEventListener('click', e => {
+                        e.stopPropagation();
+                        index = (index - 1 + images.length) % images.length;
+                        render();
+                    });
+                    gallery.querySelector('.gallery-next').addEventListener('click', e => {
+                        e.stopPropagation();
+                        index = (index + 1) % images.length;
+                        render();
+                    });
+                }
+            }
+
+            let touchStartX = 0;
+            let didSwipe = false;
+            gallery.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            gallery.addEventListener('touchend', e => {
+                if (images.length <= 1) return;
+                const dx = e.changedTouches[0].clientX - touchStartX;
+                if (Math.abs(dx) > 40) {
+                    didSwipe = true;
+                    setTimeout(() => { didSwipe = false; }, 300);
+                    index = dx > 0 ? (index - 1 + images.length) % images.length : (index + 1) % images.length;
+                    render();
+                }
+            }, { passive: true });
+
+            // Click en la foto (sin ser swipe ni flecha) abre la vista rápida del producto
+            gallery.addEventListener('click', () => {
+                if (didSwipe) return;
+                const card = gallery.closest('.rounded-2xl');
+                if (card) openQuickView(card);
+            });
+
+            render();
+        }
+
+        function initProductGalleries() {
+            document.querySelectorAll('.product-gallery').forEach(initGallery);
+        }
+
+        function openQuickView(card) {
+            const gallerySource = card.querySelector('.product-gallery');
+            const label = card.querySelector('span.text-accent');
+            const title = card.querySelector('h3');
+            const description = card.querySelector('p.text-stone-500');
+            const specs = card.querySelector('.grid.grid-cols-3');
+            const priceRow = card.querySelector('.flex.items-center.justify-between.pt-4');
+
+            document.getElementById('quickViewLabel').textContent = label ? label.textContent : '';
+            document.getElementById('quickViewTitle').textContent = title ? title.textContent : '';
+            document.getElementById('quickViewDescription').textContent = description ? description.textContent : '';
+            document.getElementById('quickViewSpecs').innerHTML = specs ? specs.outerHTML : '';
+
+            const galleryWrap = document.getElementById('quickViewGalleryWrap');
+            galleryWrap.innerHTML = '';
+            if (gallerySource) {
+                const clone = document.createElement('div');
+                clone.className = 'product-gallery w-full h-full relative flex items-center justify-center';
+                clone.dataset.images = gallerySource.dataset.images;
+                clone.dataset.alt = gallerySource.dataset.alt || '';
+                clone.dataset.fit = gallerySource.dataset.fit || 'cover';
+                galleryWrap.appendChild(clone);
+                initGallery(clone);
+            }
+
+            const priceEl = priceRow ? priceRow.children[0] : null;
+            const ctaEl = priceRow ? priceRow.children[priceRow.children.length - 1] : null;
+            document.getElementById('quickViewPrice').textContent = priceEl ? priceEl.textContent : '';
+
+            const ctaWrap = document.getElementById('quickViewCta');
+            ctaWrap.innerHTML = ctaEl ? ctaEl.outerHTML : '';
+            // Si el CTA abre el personalizador (Set de 3 / Caja Oleo), cerramos la vista rápida
+            // para no dejar dos modales superpuestos.
+            if (ctaWrap.innerHTML.includes('openCustomizer(')) {
+                ctaWrap.addEventListener('click', () => closeQuickView(), { once: true });
+            }
+            if (typeof renderQuickAddButtons === 'function') renderQuickAddButtons();
+
+            document.getElementById('quickViewModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuickView() {
+            document.getElementById('quickViewModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeQuickView();
+        });
+
+        initProductGalleries();
     </script>
 
     <script>
