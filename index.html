@@ -532,11 +532,11 @@
 
                 <!-- Blanco -->
                 <div class="bg-white p-8 md:p-10 rounded-2xl border border-[#F2ECE1] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full relative group">
-                    <div class="absolute top-6 left-6 z-10 bg-stone-500 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
-                        Individual
+                    <div class="absolute top-6 left-6 z-10 bg-stone-400 text-white text-[9px] font-extrabold uppercase tracking-widest py-1.5 px-3 rounded-full">
+                        Agotado
                     </div>
                     <div>
-                        <div class="product-gallery aspect-square bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-1" data-images="Img/1_unitario_blanco.png,Img/2_unitario_blanco.png,Img/0_unitario_blanco.png" data-alt="Chocolate Blanco" data-fit="contain"></div>
+                        <div class="product-gallery aspect-square bg-stone-50/60 rounded-xl overflow-hidden mb-8 relative flex items-center justify-center p-1 grayscale opacity-70" data-images="Img/1_unitario_blanco.png,Img/2_unitario_blanco.png,Img/0_unitario_blanco.png" data-alt="Chocolate Blanco" data-fit="contain"></div>
                         <span class="text-[10px] font-bold text-accent tracking-widest uppercase block mb-1">Gran Formato</span>
                         <h3 class="font-bold text-lg text-darkBrown mb-3 tracking-tight">Chocolate Blanco</h3>
                         <p class="text-stone-500 text-xs md:text-sm font-light leading-relaxed mb-6">Alfajor individual con delicado y sedoso baño de chocolate blanco belga de alta pureza.</p>
@@ -560,8 +560,8 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-between pt-4 mt-auto">
-                        <span class="text-xl md:text-2xl font-extrabold text-darkBrown tracking-tight">$2.690</span>
-                        <div class="quickadd flex justify-end" data-id="unit-blanco" data-name="Chocolate Blanco" data-price="2690" data-thumb="Img/0_unitario_blanco.png"></div>
+                        <span class="text-xl md:text-2xl font-extrabold text-stone-300 tracking-tight">$2.690</span>
+                        <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
                     </div>
                 </div>
 
@@ -683,19 +683,15 @@
                         <button onclick="customizerChange('bitter', 1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">+</button>
                     </div>
                 </div>
-                <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3">
+                <div class="flex items-center justify-between gap-3 border border-[#F0EBE1] rounded-xl p-3 opacity-60">
                     <div class="flex items-center gap-3">
-                        <img src="Img/0_unitario_blanco.png" alt="Blanco" class="w-12 h-12 object-contain rounded-lg bg-stone-50">
+                        <img src="Img/0_unitario_blanco.png" alt="Blanco" class="w-12 h-12 object-contain rounded-lg bg-stone-50 grayscale">
                         <div>
                             <p class="text-sm font-bold text-darkBrown">Blanco</p>
-                            <p class="text-[10px] text-stone-400 uppercase tracking-tighter">Chocolate blanco</p>
+                            <p class="text-[10px] text-stone-400 uppercase tracking-tighter">Agotado</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <button onclick="customizerChange('blanco', -1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">−</button>
-                        <span id="qty-blanco" class="w-4 text-center text-sm font-bold text-darkBrown">0</span>
-                        <button onclick="customizerChange('blanco', 1)" class="w-7 h-7 rounded-full border border-[#E6DCD0] text-darkBrown font-bold flex items-center justify-center hover:border-darkBrown transition-colors">+</button>
-                    </div>
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">Agotado</span>
                 </div>
             </div>
 
@@ -976,7 +972,8 @@
             document.getElementById('customizerTitle').textContent = config.title;
             document.getElementById('customizerPrice').textContent = formatPrice(config.price);
             Object.keys(customizerState.quantities).forEach(flavor => {
-                document.getElementById('qty-' + flavor).textContent = '0';
+                const qtyEl = document.getElementById('qty-' + flavor);
+                if (qtyEl) qtyEl.textContent = '0';
             });
 
             updateCustomizerSummary();
